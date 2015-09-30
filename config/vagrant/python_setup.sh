@@ -17,4 +17,7 @@ apt-get install -y python3 python3-dev python3-setuptools python3-pip
 # supporting: jpeg, tiff, png, freetype, littlecms
 apt-get install -y libjpeg-dev libtiff-dev zlib1g-dev libfreetype6-dev liblcms2-dev
 
+curl https://bootstrap.pypa.io/get-pip.py | python3.4
+python3 -m pip install -U setuptools
+
 echo "=== End Vagrant Provisioning using 'config/vagrant/python_setup.sh'"
