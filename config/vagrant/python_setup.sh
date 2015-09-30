@@ -11,7 +11,7 @@ echo "=== Begin Vagrant Provisioning using 'config/vagrant/python_setup.sh'"
 apt-get update -y
 
 # Python dev packages
-apt-get install -y python python-dev python-setuptools python-pip
+apt-get install -y python3 python3-dev python3-setuptools python3-pip
 
 # Dependencies for image processing with Pillow (drop-in replacement for PIL)
 # supporting: jpeg, tiff, png, freetype, littlecms
