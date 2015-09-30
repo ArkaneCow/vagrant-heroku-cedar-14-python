@@ -81,6 +81,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
               settings['django']['settings_module'],
               settings['foreman']['procfile'],
             ]
+  config.vm.provision 'virtualenv',
+            type: 'shell',
+            path: 'config/vagrant/opencv_setup.sh'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
