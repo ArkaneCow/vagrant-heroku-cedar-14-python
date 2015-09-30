@@ -40,7 +40,6 @@ if ! grep -Fq "WORKON_HOME" /home/vagrant/.profile; then
 fi
 # Get .virtualenvwrapper env variables set up:
 source /home/vagrant/.profile
-cat /home/vagrant/.profile
 if [[ -d /home/vagrant/.virtualenvs/$VENV_NAME ]]; then
     echo "Activating virtualenv $VENV_NAME."
     workon $VENV_NAME
