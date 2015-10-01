@@ -17,17 +17,14 @@ cd ~
 wget https://github.com/Itseez/opencv/archive/3.0.0.zip
 unzip 3.0.0.zip
 rm -f -r 3.0.0.zip
-cd opencv-3.0.0
-
-cd ~
 wget https://github.com/Itseez/opencv_contrib/archive/3.0.0.zip
 unzip 3.0.0.zip
 rm -f -r 3.0.0.zip
-cd ~/opencv
+cd opencv-3.0.0
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.0.0/modules ..
 make
-sudo make install/strip
+make install/strip
 
 echo "=== End Vagrant Provisioning using 'config/vagrant/opencv_setup.sh'"
